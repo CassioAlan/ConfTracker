@@ -43,11 +43,11 @@ ETAPAS DA EXECUÇÃO DO PROCESSO:
 		
 9) PROCESSAMENTO - Executar treinamento do CRF via linha de comando
 	Por exemplo:
-	CRFSharpConsole.exe -encode -template "D:\Dropbox\Mestrado\ConfSpider\development\CRF_webpages\template_window5.template" -trainfile "D:\Dropbox\Mestrado\ConfSpider\development\CRF_webpages\fold_data\fold_009\train.data" -modelfile "D:\Dropbox\Mestrado\ConfSpider\development\CRF_webpages\fold_data\fold_009\CRFexec_win5\model_window5.model"
+	CRFSharpConsole.exe -encode -template "D:\template_window5.template" -trainfile "D:\train.data" -modelfile "D:\model_window5.model"
 	
 10) PROCESSAMENTO - Executar aplicação do modelo CRF via linha de comando
 	Por exemplo:
-	CRFSharpConsole.exe -decode -modelfile "D:\Dropbox\Mestrado\ConfSpider\development\CRF_webpages\all_data\model_window5.model" -inputfile "D:\Dropbox\Mestrado\ConfSpider\development\CRF_webpages\all_data\allSites.data" -outputfile "D:\Dropbox\Mestrado\ConfSpider\development\CRF_webpages\all_data\result_window5.data" -maxword 5000
+	CRFSharpConsole.exe -decode -modelfile "D:\model_window5.model" -inputfile "D:\allSites.data" -outputfile "D:\result_window5.data" -maxword 5000
 	
 11) PÓS-PROCESSAMENTO - Interpretar classificação do CRF e extrair as datas
 	A.1 Executar ConfSpider.UIConsole.ResultoToDB
