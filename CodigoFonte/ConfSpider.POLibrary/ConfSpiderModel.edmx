@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ConfSpiderModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="conferencia">
+          <Key>
+            <PropertyRef Name="idConferencia" />
+          </Key>
+          <Property Name="idConferencia" Type="int" Nullable="false" />
+          <Property Name="sigla" Type="varchar" MaxLength="20" />
+          <Property Name="nome" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="enabled" Type="bool" Nullable="false" />
+        </EntityType>
+        <EntityType Name="data">
+          <Key>
+            <PropertyRef Name="idConferencia" />
+            <PropertyRef Name="ano" />
+            <PropertyRef Name="idTipoData" />
+            <PropertyRef Name="idTipoExtracao" />
+          </Key>
+          <Property Name="idConferencia" Type="int" Nullable="false" />
+          <Property Name="ano" Type="int" Nullable="false" />
+          <Property Name="idTipoData" Type="int" Nullable="false" />
+          <Property Name="data" Type="date" Nullable="false" />
+          <Property Name="idTipoExtracao" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="edicao">
+          <Key>
+            <PropertyRef Name="idConferencia" />
+            <PropertyRef Name="ano" />
+          </Key>
+          <Property Name="idConferencia" Type="int" Nullable="false" />
+          <Property Name="ano" Type="int" Nullable="false" />
+          <Property Name="query" Type="varchar" MaxLength="250" />
+          <Property Name="qualis" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="edicaotopico">
+          <Key>
+            <PropertyRef Name="idConferencia" />
+            <PropertyRef Name="ano" />
+            <PropertyRef Name="idTopico" />
+          </Key>
+          <Property Name="idConferencia" Type="int" Nullable="false" />
+          <Property Name="ano" Type="int" Nullable="false" />
+          <Property Name="idTopico" Type="int" Nullable="false" />
+          <Property Name="relevancia" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tipodata">
+          <Key>
+            <PropertyRef Name="idTipoData" />
+          </Key>
+          <Property Name="idTipoData" Type="int" Nullable="false" />
+          <Property Name="descricao" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="idTipoDataPai" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tipoextracao">
+          <Key>
+            <PropertyRef Name="idTipoExtracao" />
+          </Key>
+          <Property Name="idTipoExtracao" Type="int" Nullable="false" />
+          <Property Name="descricao" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="topico">
+          <Key>
+            <PropertyRef Name="idTopico" />
+          </Key>
+          <Property Name="idTopico" Type="int" Nullable="false" />
+          <Property Name="descricao" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="idTopicoPai" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="url">
+          <Key>
+            <PropertyRef Name="idConferencia" />
+            <PropertyRef Name="ano" />
+            <PropertyRef Name="ordem" />
+            <PropertyRef Name="idTipoExtracao" />
+          </Key>
+          <Property Name="idConferencia" Type="int" Nullable="false" />
+          <Property Name="ano" Type="int" Nullable="false" />
+          <Property Name="ordem" Type="int" Nullable="false" />
+          <Property Name="url" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="idTipoExtracao" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_data_edicao">
+          <End Role="edicao" Type="Self.edicao" Multiplicity="1" />
+          <End Role="data" Type="Self.data" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="edicao">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Principal>
+            <Dependent Role="data">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_data_tipodata">
+          <End Role="tipodata" Type="Self.tipodata" Multiplicity="1" />
+          <End Role="data" Type="Self.data" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipodata">
+              <PropertyRef Name="idTipoData" />
+            </Principal>
+            <Dependent Role="data">
+              <PropertyRef Name="idTipoData" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_data_tipoextracao">
+          <End Role="tipoextracao" Type="Self.tipoextracao" Multiplicity="1" />
+          <End Role="data" Type="Self.data" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoextracao">
+              <PropertyRef Name="idTipoExtracao" />
+            </Principal>
+            <Dependent Role="data">
+              <PropertyRef Name="idTipoExtracao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_edicao_conferencia_idconferencia">
+          <End Role="conferencia" Type="Self.conferencia" Multiplicity="1" />
+          <End Role="edicao" Type="Self.edicao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="conferencia">
+              <PropertyRef Name="idConferencia" />
+            </Principal>
+            <Dependent Role="edicao">
+              <PropertyRef Name="idConferencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_edicaotopico_edicao">
+          <End Role="edicao" Type="Self.edicao" Multiplicity="1" />
+          <End Role="edicaotopico" Type="Self.edicaotopico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="edicao">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Principal>
+            <Dependent Role="edicaotopico">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_edicaotopico_topico">
+          <End Role="topico" Type="Self.topico" Multiplicity="1" />
+          <End Role="edicaotopico" Type="Self.edicaotopico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="topico">
+              <PropertyRef Name="idTopico" />
+            </Principal>
+            <Dependent Role="edicaotopico">
+              <PropertyRef Name="idTopico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipodata_tipodata">
+          <End Role="tipodata" Type="Self.tipodata" Multiplicity="1" />
+          <End Role="tipodata1" Type="Self.tipodata" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipodata">
+              <PropertyRef Name="idTipoData" />
+            </Principal>
+            <Dependent Role="tipodata1">
+              <PropertyRef Name="idTipoDataPai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_topico_topico">
+          <End Role="topico" Type="Self.topico" Multiplicity="1" />
+          <End Role="topico1" Type="Self.topico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="topico">
+              <PropertyRef Name="idTopico" />
+            </Principal>
+            <Dependent Role="topico1">
+              <PropertyRef Name="idTopicoPai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_url_edicao">
+          <End Role="edicao" Type="Self.edicao" Multiplicity="1" />
+          <End Role="url" Type="Self.url" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="edicao">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Principal>
+            <Dependent Role="url">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_url_tipoextracao">
+          <End Role="tipoextracao" Type="Self.tipoextracao" Multiplicity="1" />
+          <End Role="url" Type="Self.url" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoextracao">
+              <PropertyRef Name="idTipoExtracao" />
+            </Principal>
+            <Dependent Role="url">
+              <PropertyRef Name="idTipoExtracao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ConfSpiderModelStoreContainer">
+          <EntitySet Name="conferencia" EntityType="Self.conferencia" Schema="confspider" store:Type="Tables" />
+          <EntitySet Name="data" EntityType="Self.data" Schema="confspider" store:Type="Tables" />
+          <EntitySet Name="edicao" EntityType="Self.edicao" Schema="confspider" store:Type="Tables" />
+          <EntitySet Name="edicaotopico" EntityType="Self.edicaotopico" Schema="confspider" store:Type="Tables" />
+          <EntitySet Name="tipodata" EntityType="Self.tipodata" Schema="confspider" store:Type="Tables" />
+          <EntitySet Name="tipoextracao" EntityType="Self.tipoextracao" Schema="confspider" store:Type="Tables" />
+          <EntitySet Name="topico" EntityType="Self.topico" Schema="confspider" store:Type="Tables" />
+          <EntitySet Name="url" EntityType="Self.url" Schema="confspider" store:Type="Tables" />
+          <AssociationSet Name="fk_data_edicao" Association="Self.fk_data_edicao">
+            <End Role="edicao" EntitySet="edicao" />
+            <End Role="data" EntitySet="data" />
+          </AssociationSet>
+          <AssociationSet Name="fk_data_tipodata" Association="Self.fk_data_tipodata">
+            <End Role="tipodata" EntitySet="tipodata" />
+            <End Role="data" EntitySet="data" />
+          </AssociationSet>
+          <AssociationSet Name="fk_data_tipoextracao" Association="Self.fk_data_tipoextracao">
+            <End Role="tipoextracao" EntitySet="tipoextracao" />
+            <End Role="data" EntitySet="data" />
+          </AssociationSet>
+          <AssociationSet Name="fk_edicao_conferencia_idconferencia" Association="Self.fk_edicao_conferencia_idconferencia">
+            <End Role="conferencia" EntitySet="conferencia" />
+            <End Role="edicao" EntitySet="edicao" />
+          </AssociationSet>
+          <AssociationSet Name="fk_edicaotopico_edicao" Association="Self.fk_edicaotopico_edicao">
+            <End Role="edicao" EntitySet="edicao" />
+            <End Role="edicaotopico" EntitySet="edicaotopico" />
+          </AssociationSet>
+          <AssociationSet Name="fk_edicaotopico_topico" Association="Self.fk_edicaotopico_topico">
+            <End Role="topico" EntitySet="topico" />
+            <End Role="edicaotopico" EntitySet="edicaotopico" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipodata_tipodata" Association="Self.fk_tipodata_tipodata">
+            <End Role="tipodata" EntitySet="tipodata" />
+            <End Role="tipodata1" EntitySet="tipodata" />
+          </AssociationSet>
+          <AssociationSet Name="fk_topico_topico" Association="Self.fk_topico_topico">
+            <End Role="topico" EntitySet="topico" />
+            <End Role="topico1" EntitySet="topico" />
+          </AssociationSet>
+          <AssociationSet Name="fk_url_edicao" Association="Self.fk_url_edicao">
+            <End Role="edicao" EntitySet="edicao" />
+            <End Role="url" EntitySet="url" />
+          </AssociationSet>
+          <AssociationSet Name="fk_url_tipoextracao" Association="Self.fk_url_tipoextracao">
+            <End Role="tipoextracao" EntitySet="tipoextracao" />
+            <End Role="url" EntitySet="url" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ConfSpiderModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="conferencia">
+          <Key>
+            <PropertyRef Name="idConferencia" />
+          </Key>
+          <Property Name="idConferencia" Type="Int32" Nullable="false" />
+          <Property Name="sigla" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="edicaos" Relationship="Self.fk_edicao_conferencia_idconferencia" FromRole="conferencia" ToRole="edicao" />
+          <Property Name="enabled" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="datum">
+          <Key>
+            <PropertyRef Name="idConferencia" />
+            <PropertyRef Name="ano" />
+            <PropertyRef Name="idTipoData" />
+            <PropertyRef Name="idTipoExtracao" />
+          </Key>
+          <Property Name="idConferencia" Type="Int32" Nullable="false" />
+          <Property Name="ano" Type="Int32" Nullable="false" />
+          <Property Name="idTipoData" Type="Int32" Nullable="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="edicao" Relationship="Self.fk_data_edicao" FromRole="data" ToRole="edicao" />
+          <NavigationProperty Name="tipodata" Relationship="Self.fk_data_tipodata" FromRole="data" ToRole="tipodata" />
+          <Property Name="idTipoExtracao" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tipoextracao" Relationship="ConfSpiderModel.fk_data_tipoextracao" FromRole="datum" ToRole="tipoextracao" />
+        </EntityType>
+        <EntityType Name="edicao">
+          <Key>
+            <PropertyRef Name="idConferencia" />
+            <PropertyRef Name="ano" />
+          </Key>
+          <Property Name="idConferencia" Type="Int32" Nullable="false" />
+          <Property Name="ano" Type="Int32" Nullable="false" />
+          <Property Name="query" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="qualis" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="conferencia" Relationship="Self.fk_edicao_conferencia_idconferencia" FromRole="edicao" ToRole="conferencia" />
+          <NavigationProperty Name="data" Relationship="Self.fk_data_edicao" FromRole="edicao" ToRole="data" />
+          <NavigationProperty Name="edicaotopicoes" Relationship="Self.fk_edicaotopico_edicao" FromRole="edicao" ToRole="edicaotopico" />
+          <NavigationProperty Name="urls" Relationship="Self.fk_url_edicao" FromRole="edicao" ToRole="url" />
+        </EntityType>
+        <EntityType Name="edicaotopico">
+          <Key>
+            <PropertyRef Name="idConferencia" />
+            <PropertyRef Name="ano" />
+            <PropertyRef Name="idTopico" />
+          </Key>
+          <Property Name="idConferencia" Type="Int32" Nullable="false" />
+          <Property Name="ano" Type="Int32" Nullable="false" />
+          <Property Name="idTopico" Type="Int32" Nullable="false" />
+          <Property Name="relevancia" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="edicao" Relationship="Self.fk_edicaotopico_edicao" FromRole="edicaotopico" ToRole="edicao" />
+          <NavigationProperty Name="topico" Relationship="ConfSpiderModel.fk_edicaotopico_topico" FromRole="edicaotopico" ToRole="topico" />
+        </EntityType>
+        <EntityType Name="tipodata">
+          <Key>
+            <PropertyRef Name="idTipoData" />
+          </Key>
+          <Property Name="idTipoData" Type="Int32" Nullable="false" />
+          <Property Name="descricao" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="data" Relationship="Self.fk_data_tipodata" FromRole="tipodata" ToRole="data" />
+          <Property Name="idTipoDataPai" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tipodata1" Relationship="ConfSpiderModel.fk_tipodata_tipodata" FromRole="tipodata" ToRole="tipodata1" />
+          <NavigationProperty Name="tipodata2" Relationship="ConfSpiderModel.fk_tipodata_tipodata" FromRole="tipodata1" ToRole="tipodata" />
+        </EntityType>
+        <EntityType Name="url">
+          <Key>
+            <PropertyRef Name="idConferencia" />
+            <PropertyRef Name="ano" />
+            <PropertyRef Name="ordem" />
+            <PropertyRef Name="idTipoExtracao" />
+          </Key>
+          <Property Name="idConferencia" Type="Int32" Nullable="false" />
+          <Property Name="ano" Type="Int32" Nullable="false" />
+          <Property Name="ordem" Type="Int32" Nullable="false" />
+          <Property Name="url1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="edicao" Relationship="Self.fk_url_edicao" FromRole="url" ToRole="edicao" />
+          <Property Name="idTipoExtracao" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tipoextracao" Relationship="ConfSpiderModel.fk_url_tipoextracao" FromRole="url" ToRole="tipoextracao" />
+        </EntityType>
+        <Association Name="fk_edicao_conferencia_idconferencia">
+          <End Role="conferencia" Type="Self.conferencia" Multiplicity="1" />
+          <End Role="edicao" Type="Self.edicao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="conferencia">
+              <PropertyRef Name="idConferencia" />
+            </Principal>
+            <Dependent Role="edicao">
+              <PropertyRef Name="idConferencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_data_edicao">
+          <End Role="edicao" Type="Self.edicao" Multiplicity="1" />
+          <End Role="data" Type="Self.datum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="edicao">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Principal>
+            <Dependent Role="data">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_data_tipodata">
+          <End Role="tipodata" Type="Self.tipodata" Multiplicity="1" />
+          <End Role="data" Type="Self.datum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipodata">
+              <PropertyRef Name="idTipoData" />
+            </Principal>
+            <Dependent Role="data">
+              <PropertyRef Name="idTipoData" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_edicaotopico_edicao">
+          <End Role="edicao" Type="Self.edicao" Multiplicity="1" />
+          <End Role="edicaotopico" Type="Self.edicaotopico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="edicao">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Principal>
+            <Dependent Role="edicaotopico">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_url_edicao">
+          <End Role="edicao" Type="Self.edicao" Multiplicity="1" />
+          <End Role="url" Type="Self.url" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="edicao">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Principal>
+            <Dependent Role="url">
+              <PropertyRef Name="idConferencia" />
+              <PropertyRef Name="ano" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ConfSpiderEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="conferencias" EntityType="Self.conferencia" />
+          <EntitySet Name="data" EntityType="Self.datum" />
+          <EntitySet Name="edicaos" EntityType="Self.edicao" />
+          <EntitySet Name="edicaotopicoes" EntityType="Self.edicaotopico" />
+          <EntitySet Name="tipodatas" EntityType="Self.tipodata" />
+          <EntitySet Name="urls" EntityType="Self.url" />
+          <AssociationSet Name="fk_edicao_conferencia_idconferencia" Association="Self.fk_edicao_conferencia_idconferencia">
+            <End Role="conferencia" EntitySet="conferencias" />
+            <End Role="edicao" EntitySet="edicaos" />
+          </AssociationSet>
+          <AssociationSet Name="fk_data_edicao" Association="Self.fk_data_edicao">
+            <End Role="edicao" EntitySet="edicaos" />
+            <End Role="data" EntitySet="data" />
+          </AssociationSet>
+          <AssociationSet Name="fk_data_tipodata" Association="Self.fk_data_tipodata">
+            <End Role="tipodata" EntitySet="tipodatas" />
+            <End Role="data" EntitySet="data" />
+          </AssociationSet>
+          <AssociationSet Name="fk_edicaotopico_edicao" Association="Self.fk_edicaotopico_edicao">
+            <End Role="edicao" EntitySet="edicaos" />
+            <End Role="edicaotopico" EntitySet="edicaotopicoes" />
+          </AssociationSet>
+          <AssociationSet Name="fk_url_edicao" Association="Self.fk_url_edicao">
+            <End Role="edicao" EntitySet="edicaos" />
+            <End Role="url" EntitySet="urls" />
+          </AssociationSet>
+          <EntitySet Name="topicoes" EntityType="ConfSpiderModel.topico" />
+          <AssociationSet Name="fk_edicaotopico_topico" Association="ConfSpiderModel.fk_edicaotopico_topico">
+            <End Role="topico" EntitySet="topicoes" />
+            <End Role="edicaotopico" EntitySet="edicaotopicoes" />
+          </AssociationSet>
+          <AssociationSet Name="fk_topico_topico" Association="ConfSpiderModel.fk_topico_topico">
+            <End Role="topico" EntitySet="topicoes" />
+            <End Role="topico1" EntitySet="topicoes" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tipodata_tipodata" Association="ConfSpiderModel.fk_tipodata_tipodata">
+            <End Role="tipodata" EntitySet="tipodatas" />
+            <End Role="tipodata1" EntitySet="tipodatas" />
+          </AssociationSet>
+          <EntitySet Name="tipoextracaos" EntityType="ConfSpiderModel.tipoextracao" />
+          <AssociationSet Name="fk_data_tipoextracao" Association="ConfSpiderModel.fk_data_tipoextracao">
+            <End Role="tipoextracao" EntitySet="tipoextracaos" />
+            <End Role="datum" EntitySet="data" />
+          </AssociationSet>
+          <AssociationSet Name="fk_url_tipoextracao" Association="ConfSpiderModel.fk_url_tipoextracao">
+            <End Role="tipoextracao" EntitySet="tipoextracaos" />
+            <End Role="url" EntitySet="urls" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="topico">
+          <Key>
+            <PropertyRef Name="idTopico" />
+          </Key>
+          <Property Name="idTopico" Type="Int32" Nullable="false" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="idTopicoPai" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="edicaotopicoes" Relationship="ConfSpiderModel.fk_edicaotopico_topico" FromRole="topico" ToRole="edicaotopico" />
+          <NavigationProperty Name="topico1" Relationship="ConfSpiderModel.fk_topico_topico" FromRole="topico" ToRole="topico1" />
+          <NavigationProperty Name="topico2" Relationship="ConfSpiderModel.fk_topico_topico" FromRole="topico1" ToRole="topico" />
+        </EntityType>
+        <Association Name="fk_edicaotopico_topico">
+          <End Type="ConfSpiderModel.topico" Role="topico" Multiplicity="1" />
+          <End Type="ConfSpiderModel.edicaotopico" Role="edicaotopico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="topico">
+              <PropertyRef Name="idTopico" />
+            </Principal>
+            <Dependent Role="edicaotopico">
+              <PropertyRef Name="idTopico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_topico_topico">
+          <End Type="ConfSpiderModel.topico" Role="topico" Multiplicity="1" />
+          <End Type="ConfSpiderModel.topico" Role="topico1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="topico">
+              <PropertyRef Name="idTopico" />
+            </Principal>
+            <Dependent Role="topico1">
+              <PropertyRef Name="idTopicoPai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tipodata_tipodata">
+          <End Type="ConfSpiderModel.tipodata" Role="tipodata" Multiplicity="1" />
+          <End Type="ConfSpiderModel.tipodata" Role="tipodata1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipodata">
+              <PropertyRef Name="idTipoData" />
+            </Principal>
+            <Dependent Role="tipodata1">
+              <PropertyRef Name="idTipoDataPai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tipoextracao">
+          <Key>
+            <PropertyRef Name="idTipoExtracao" />
+          </Key>
+          <Property Name="idTipoExtracao" Type="Int32" Nullable="false" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="data" Relationship="ConfSpiderModel.fk_data_tipoextracao" FromRole="tipoextracao" ToRole="datum" />
+          <NavigationProperty Name="urls" Relationship="ConfSpiderModel.fk_url_tipoextracao" FromRole="tipoextracao" ToRole="url" />
+        </EntityType>
+        <Association Name="fk_data_tipoextracao">
+          <End Type="ConfSpiderModel.tipoextracao" Role="tipoextracao" Multiplicity="1" />
+          <End Type="ConfSpiderModel.datum" Role="datum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoextracao">
+              <PropertyRef Name="idTipoExtracao" />
+            </Principal>
+            <Dependent Role="datum">
+              <PropertyRef Name="idTipoExtracao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_url_tipoextracao">
+          <End Type="ConfSpiderModel.tipoextracao" Role="tipoextracao" Multiplicity="1" />
+          <End Type="ConfSpiderModel.url" Role="url" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tipoextracao">
+              <PropertyRef Name="idTipoExtracao" />
+            </Principal>
+            <Dependent Role="url">
+              <PropertyRef Name="idTipoExtracao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ConfSpiderModelStoreContainer" CdmEntityContainer="ConfSpiderEntities">
+          <EntitySetMapping Name="conferencias">
+            <EntityTypeMapping TypeName="ConfSpiderModel.conferencia">
+              <MappingFragment StoreEntitySet="conferencia">
+                <ScalarProperty Name="enabled" ColumnName="enabled" />
+                <ScalarProperty Name="idConferencia" ColumnName="idConferencia" />
+                <ScalarProperty Name="sigla" ColumnName="sigla" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="data">
+            <EntityTypeMapping TypeName="ConfSpiderModel.datum">
+              <MappingFragment StoreEntitySet="data">
+                <ScalarProperty Name="idTipoExtracao" ColumnName="idTipoExtracao" />
+                <ScalarProperty Name="idConferencia" ColumnName="idConferencia" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="idTipoData" ColumnName="idTipoData" />
+                <ScalarProperty Name="data" ColumnName="data" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="edicaos">
+            <EntityTypeMapping TypeName="ConfSpiderModel.edicao">
+              <MappingFragment StoreEntitySet="edicao">
+                <ScalarProperty Name="idConferencia" ColumnName="idConferencia" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="query" ColumnName="query" />
+                <ScalarProperty Name="qualis" ColumnName="qualis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="edicaotopicoes">
+            <EntityTypeMapping TypeName="ConfSpiderModel.edicaotopico">
+              <MappingFragment StoreEntitySet="edicaotopico">
+                <ScalarProperty Name="idConferencia" ColumnName="idConferencia" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="idTopico" ColumnName="idTopico" />
+                <ScalarProperty Name="relevancia" ColumnName="relevancia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipodatas">
+            <EntityTypeMapping TypeName="ConfSpiderModel.tipodata">
+              <MappingFragment StoreEntitySet="tipodata">
+                <ScalarProperty Name="idTipoDataPai" ColumnName="idTipoDataPai" />
+                <ScalarProperty Name="idTipoData" ColumnName="idTipoData" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="urls">
+            <EntityTypeMapping TypeName="ConfSpiderModel.url">
+              <MappingFragment StoreEntitySet="url">
+                <ScalarProperty Name="idTipoExtracao" ColumnName="idTipoExtracao" />
+                <ScalarProperty Name="idConferencia" ColumnName="idConferencia" />
+                <ScalarProperty Name="ano" ColumnName="ano" />
+                <ScalarProperty Name="ordem" ColumnName="ordem" />
+                <ScalarProperty Name="url1" ColumnName="url" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="topicoes">
+            <EntityTypeMapping TypeName="ConfSpiderModel.topico">
+              <MappingFragment StoreEntitySet="topico">
+                <ScalarProperty Name="idTopicoPai" ColumnName="idTopicoPai" />
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="idTopico" ColumnName="idTopico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tipoextracaos">
+            <EntityTypeMapping TypeName="ConfSpiderModel.tipoextracao">
+              <MappingFragment StoreEntitySet="tipoextracao">
+                <ScalarProperty Name="descricao" ColumnName="descricao" />
+                <ScalarProperty Name="idTipoExtracao" ColumnName="idTipoExtracao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

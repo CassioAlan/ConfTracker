@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="9e09c830-5ec0-476c-af7f-40bc3be8e0eb"
+  name="INL"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ea3f4c0b-7b29-4351-a17c-405cefa85841"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DConfSpider.INL"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="baaf06da-17a8-4cd3-b61a-273316e5983e"
+        LastKnownName="HtmlManipulate"
+        LastKnownLocation="Package1_2209.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6b1b66b0-2004-4e89-9583-40f290d1f368"
+        LastKnownName="ProcessComunicator"
+        LastKnownLocation="Package_2210.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6dea96c0-f90a-4fb7-a9c9-598decb9c6dc"
+        LastKnownName="UrlSearchEngine"
+        LastKnownLocation="Package_2211.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="71465f41-2038-4358-a733-085033eb0a41"
+        LastKnownName="WebPagesDownload"
+        LastKnownLocation="Package5_2211.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

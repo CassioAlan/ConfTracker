@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D045615-FAA1-488A-91F1-A2854610CF51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConfSpider.INL.WebPagesDownload</RootNamespace>
+    <AssemblyName>ConfSpider.INL.WebPagesDownload</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Masters.Core">
+      <HintPath>..\References\Masters.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Masters.LogHelper">
+      <HintPath>..\References\Masters.LogHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WebPagesDownloader.cs" />
+    <Compile Include="WebPagesDownloaderEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfSpider.INL.ProcessComunicator\ConfSpider.INL.ProcessComunicator.csproj">
+      <Project>{191d7409-4d6b-4278-8146-7d5a4bcc26ae}</Project>
+      <Name>ConfSpider.INL.ProcessComunicator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfSpider.TOLibrary\ConfSpider.TOLibrary.csproj">
+      <Project>{fbc264cd-c95f-4b98-9e1d-2438c24cd193}</Project>
+      <Name>ConfSpider.TOLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\curl-7.43.patch" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\curl-ca-bundle.crt" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\curl-config.pdf" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\curl.COPYING" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\curl.pdf" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\be\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\bg\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\ca\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\cs\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\cs\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\da\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\da\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\de\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\de\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\el\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\en%40boldquot\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\en%40quot\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\en_GB\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\eo\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\eo\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\es\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\et\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\eu\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\fi\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\fi\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\fr\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\fr\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\ga\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\gl\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\he\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\hr\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\hr\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\hu\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\id\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\id\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\it\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\it\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\ja\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\ja\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\locale.alias" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\lt\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\nb\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\nl\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\nl\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\pl\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\pl\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\pt\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\pt_BR\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\pt_BR\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\ro\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\ro\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\ru\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\sk\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\sl\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\sr\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\sr\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\sv\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\tr\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\uk\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\uk\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\vi\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\vi\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\zh_CN\LC_MESSAGES\libidn.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\zh_CN\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\locale\zh_TW\LC_MESSAGES\wget.mo" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\wget-1.16.3.patch" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\wget.COPYING" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\wget.ini.sample" />
+    <None Include="wget-1.16.3_curl-7.43.0_win32_win64\wget.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wget-1.16.3_curl-7.43.0_win32_win64\curl.exe" />
+    <Content Include="wget-1.16.3_curl-7.43.0_win32_win64\curl64.exe" />
+    <Content Include="wget-1.16.3_curl-7.43.0_win32_win64\wget.exe" />
+    <Content Include="wget-1.16.3_curl-7.43.0_win32_win64\wget64.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

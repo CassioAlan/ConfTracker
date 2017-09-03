@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="4354a04d-af58-4f75-b313-9f217f9414ed"
+  name="ConfSpider"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="26255cbe-deba-453f-8df5-20b2558eea6a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DConfSpider"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f26b2c73-bbf5-49b6-87ee-bca715f51710"
+        LastKnownName="TOLibrary"
+        LastKnownLocation="Package1_1953.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="38d3b5f9-6dc4-490e-a00d-23e09d914264"
+        LastKnownName="BTLibrary"
+        LastKnownLocation="Package_1955.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9bc59aa5-0ee3-4ca8-b20a-143f2c3c2fc3"
+        LastKnownName="POLibrary"
+        LastKnownLocation="Package4_1955.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9e09c830-5ec0-476c-af7f-40bc3be8e0eb"
+        LastKnownName="INL"
+        LastKnownLocation="Package_2209.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="18a8788e-c332-4452-90a5-9940df8a128d"
+        LastKnownName="BLL"
+        LastKnownLocation="Package_2213.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

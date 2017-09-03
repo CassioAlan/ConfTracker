@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6b1b66b0-2004-4e89-9583-40f290d1f368"
+  name="ProcessComunicator"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="33619e28-596c-4c96-85e7-87250f8e2af2"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DConfSpider.INL.ProcessComunicator"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="3d7d64ff-7f81-4577-95f1-5c0c0c162062"
+        name="ProcessComunicatorSimple"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="62522803-9aa6-4f05-a5e3-42bb7104ede7"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.ProcessComunicator%2Fbin%2FDebug%2FConfSpider.INL.ProcessComunicator.dll Namespace%3DConfSpider.INL.ProcessComunicator Type%3DProcessComunicatorSimple"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b5949907-8344-43f0-9be3-dc680700d23d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="112ae88d-46af-4ece-8ac3-e561ce8ddc35">
+                <propertyInstance
+                  Id="03a697d3-d9a5-40e9-9919-735477324ca7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1b18a08b-587b-4817-b423-1a7bf8ced30c">
+                <propertyInstance
+                  Id="1a64f698-7062-410d-810d-ddfc675aa735"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9a89f04e-e327-407b-9c0d-aa4ca0385442">
+                <propertyInstance
+                  Id="d95095ee-1080-4b6e-8ca2-c0d4484eea79"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="052dd170-4084-4dff-ba45-4c21e4a2be0b">
+                <propertyInstance
+                  Id="6d8bd1dd-3523-40c7-ac99-d79fa0218b4d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="397426b8-be1b-48ee-b859-ba607046590a">
+                <propertyInstance
+                  Id="3b74158f-3206-438d-b1b5-eb6f4590d471"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8232783b-362f-489c-a895-cef4e09bd55e"
+            name="ExecCommandSimple"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e0dbfc92-a6c8-4ee5-a860-d245d9dd6842"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.ProcessComunicator%2Fbin%2FDebug%2FConfSpider.INL.ProcessComunicator.dll Namespace%3DConfSpider.INL.ProcessComunicator Type%3DProcessComunicatorSimple Member%3D(Name%3DExecCommandSimple OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e0bfc73a-3cee-4da5-a6bc-c68b28f84231"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e9858e3-a31d-4736-9785-31e8b15e91fb">
+                    <propertyInstance
+                      Id="ad488daa-6c5e-4b07-a74b-fdf5f65573d7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d690263d-3621-49ed-875b-ce3640af9ded">
+                    <propertyInstance
+                      Id="9b653a64-1d5c-4431-ba28-ad9ce6920d3e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e26471c-ab9f-4e58-a80d-2d90cb45ee77">
+                    <propertyInstance
+                      Id="c8eba719-5fba-4b2b-b808-6a20ddbff5f0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3db730e2-1f00-4334-a204-27fba3b44db6">
+                    <propertyInstance
+                      Id="a10d293d-8d1e-4f3e-822c-30526c82b702"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34783e93-34fe-401f-82e6-63a51d3d0008">
+                    <propertyInstance
+                      Id="07aa3410-8a14-4625-ac88-e73b8c71ae2b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="930969b8-ddea-4ef9-9dc0-b3bc694763c9">
+                    <propertyInstance
+                      Id="1c6c6ab8-aa16-4f8d-9836-a888063876bc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d22d3550-1940-4421-9ada-d83694e89987"
+                  name="command"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="cf109c5c-fddc-4f73-9f41-ee87ac34c5df"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.ProcessComunicator%2Fbin%2FDebug%2FConfSpider.INL.ProcessComunicator.dll Namespace%3DConfSpider.INL.ProcessComunicator Type%3DProcessComunicatorSimple Member%3D(Name%3DExecCommandSimple OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dcommand"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ConfSpiderModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="48be5636-356e-41ab-ba0e-463fa5f11c63"
+                  name="arguments"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="be5b3fdb-5ec6-4741-9715-40b36201b6e6"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.ProcessComunicator%2Fbin%2FDebug%2FConfSpider.INL.ProcessComunicator.dll Namespace%3DConfSpider.INL.ProcessComunicator Type%3DProcessComunicatorSimple Member%3D(Name%3DExecCommandSimple OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Darguments"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ConfSpiderModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

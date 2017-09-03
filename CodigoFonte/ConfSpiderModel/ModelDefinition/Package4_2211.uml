@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="723efe16-b77f-4374-9588-7c532fb191b4"
+  name="v1"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="6578649b-1d55-4fb1-a313-dd20f814d8ac"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGoogle.Apis.Customsearch.v1"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="f670aeac-44ad-4fdb-a25a-b55374b85881"
+        name="CustomsearchService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="4076af92-2493-4a56-b2f7-7ac9aec3fb20"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2Fpackages%2FGoogle.Apis.Customsearch.v1.1.10.0.460%2Flib%2Fportable-net40%2Bsl50%2Bwin%2Bwpa81%2Bwp80%2FGoogle.Apis.Customsearch.v1.dll Namespace%3DGoogle.Apis.Customsearch.v1 Type%3DCustomsearchService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="93bd59bf-de40-4fa2-abb4-5072faeb37ae"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3aebdee8-a601-48e4-ac23-0b648b7f709b">
+                <propertyInstance
+                  Id="fe5f3def-8549-4c43-aeea-0ea8455f15bd"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f9f841bb-51b6-4671-8c83-747d2a62d1ee">
+                <propertyInstance
+                  Id="c4d210ef-02e7-49ff-ae7d-6dc22adebf43"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ca1e4031-925a-4faa-809f-13cf3dfacbcd">
+                <propertyInstance
+                  Id="d3efc930-7044-404b-8f0b-7f072f780eae"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4932832f-77c4-4d13-a1f7-1e9eeead1da1">
+                <propertyInstance
+                  Id="827ef3ba-9522-421a-94b5-70359f1c59ae"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f6cc5846-110c-48c4-8185-75dac26aeb30">
+                <propertyInstance
+                  Id="19a44fff-24e7-4d61-a40b-0a0639c26b65"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

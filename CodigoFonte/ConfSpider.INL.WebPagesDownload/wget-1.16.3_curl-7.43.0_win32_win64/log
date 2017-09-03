@@ -1,0 +1,7 @@
+--2015-09-13 11:23:17--  https://www.dac.com/
+Resolvendo www.dac.com (www.dac.com)... 76.12.219.36
+Conectando-se a www.dac.com (www.dac.com)|76.12.219.36|:443... conectado.
+ERRO: o nome alternativo do sujeito do certificado não coincide
+	com o nome de máquina solicitado “www.dac.com”.
+Para se conectar a www.dac.com de forma insegura, use "--no-check-certificate".
+0 arquivos convertidos em 0 segundos.

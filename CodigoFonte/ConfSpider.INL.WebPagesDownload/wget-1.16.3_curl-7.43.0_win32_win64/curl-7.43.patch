@@ -1,0 +1,22 @@
+--- lib/curl_config.h.in	Fri Sep 05 03:42:47 2014
++++ lib/curl_config.h.in	Sat Sep 27 06:34:17 2014
+@@ -1034,3 +1034,18 @@
+ 
+ /* the signed version of size_t */
+ #undef ssize_t
++
++#ifdef _WIN32
++#ifndef HAVE_GETADDRINFO
++#define HAVE_GETADDRINFO 1
++#endif
++#ifndef HAVE_GETADDRINFO_THREADSAFE
++#define HAVE_GETADDRINFO_THREADSAFE 1
++#endif
++#ifndef ENABLE_IPV6
++#define ENABLE_IPV6 1
++#endif
++#ifdef USE_THREADS_POSIX
++#undef USE_THREADS_POSIX
++#endif
++#endif
+\ No newline at end of file

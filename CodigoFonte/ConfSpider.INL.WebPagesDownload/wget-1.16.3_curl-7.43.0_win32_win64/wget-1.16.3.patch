@@ -1,0 +1,271 @@
+--- lib/sockets.c	Mon Mar 09 16:03:29 2015
++++ lib/sockets.c	Mon Mar 16 02:21:43 2015
+@@ -47,6 +47,8 @@
+ 
+   /* Test whether fd refers to a socket.  */
+   sock = FD_TO_SOCKET (fd);
++
++  if (getenv ("WGETUSECTIMEOUT") == NULL) {
+   ev.lNetworkEvents = 0xDEADBEEF;
+   WSAEnumNetworkEvents (sock, NULL, &ev);
+   if (ev.lNetworkEvents != 0xDEADBEEF)
+@@ -72,6 +74,13 @@
+   else
+     /* Some other type of file descriptor.  */
+     return execute_close_hooks (remaining_list, primary, fd);
++  }
++  else {
++     /* This call frees the file descriptor and does a
++       CloseHandle ((HANDLE) _get_osfhandle (fd)), which fails.  */
++    _close (fd);
++    return 0;
++  }
+ }
+ 
+ static int
+--- src/connect.c	Mon Feb 23 22:10:22 2015
++++ src/connect.c	Mon Mar 16 02:22:03 2015
+@@ -246,6 +246,21 @@
+   ctx.addr = addr;
+   ctx.addrlen = addrlen;
+ 
++#ifdef WINDOWS
++  if (timeout > 0.0 ) {
++    struct linger {
++      int l; /* 0 graceful, non-zero abortive */
++      int t; /* timeout linger */
++    } lin;
++    lin.l = 1;
++    lin.t = 0;
++
++    setsockopt(ctx.fd, SOL_SOCKET, SO_LINGER, &lin, sizeof lin);
++  
++    putenv("WGETUSECTIMEOUT=1");
++  }
++#endif
++
+   if (run_with_timeout (timeout, connect_with_timeout_callback, &ctx))
+     {
+       errno = ETIMEDOUT;
+--- src/init.c	Sat Jan 31 06:25:57 2015
++++ src/init.c	Sun Mar 15 04:36:13 2015
+@@ -546,6 +546,18 @@
+ 
+    Additionally, for windows, look in the directory where wget.exe
+    resides.  */
++#ifdef WINDOWS
++#include <shlobj.h>
++#ifdef SYSTEM_WGETRC
++#undef SYSTEM_WGETRC
++#endif
++char * SYSTEM_WGETRC;
++char rcPath[MAX_PATH];
++char szDrive[_MAX_DRIVE];
++char szDir[_MAX_DIR];
++char szFName[_MAX_FNAME];
++char szExt[_MAX_EXT];
++#endif
+ char *
+ wgetrc_file_name (void)
+ {
+@@ -556,6 +568,14 @@
+   file = wgetrc_user_file_name ();
+ 
+ #ifdef WINDOWS
++
++	if (GetModuleFileNameA (NULL, rcPath, MAX_PATH))
++	{
++		_splitpath (rcPath, szDrive, szDir, szFName, szExt);
++		_makepath (rcPath, szDrive, szDir, "wget", "ini");
++		SYSTEM_WGETRC = strdup (rcPath);
++	}
++
+   /* Under Windows, if we still haven't found .wgetrc, look for the file
+      `wget.ini' in the directory where `wget.exe' resides; we do this for
+      backward compatibility with previous versions of Wget.
+--- src/iri.c	Mon Feb 23 22:10:22 2015
++++ src/iri.c	Sun Mar 15 04:36:13 2015
+@@ -51,6 +51,44 @@
+ 
+ /* Given a string containing "charset=XXX", return the encoding if found,
+    or NULL otherwise */
++
++#ifdef WINDOWS
++/* from libevil */
++char *strcasestr(const char *haystack, const char *needle)
++{
++   size_t length_needle;
++   size_t length_haystack;
++   size_t i;
++
++   if (!haystack || !needle)
++     return NULL;
++
++   length_needle = strlen(needle);
++   length_haystack = strlen(haystack) - length_needle + 1;
++
++   for (i = 0; i < length_haystack; i++)
++     {
++        size_t j;
++
++        for (j = 0; j < length_needle; j++)
++          {
++            unsigned char c1;
++            unsigned char c2;
++
++            c1 = haystack[i+j];
++            c2 = needle[j];
++            if (toupper(c1) != toupper(c2))
++              goto next;
++          }
++        return (char *) haystack + i;
++     next:
++        ;
++     }
++
++   return NULL;
++}
++#endif
++
+ char *
+ parse_charset (char *str)
+ {
+@@ -145,7 +183,7 @@
+ 
+   for (;;)
+     {
+-      if (iconv (cd, &in, &inlen, out, &outlen) != (size_t)(-1))
++      if (iconv (cd, (const char **)&in, &inlen, out, &outlen) != (size_t)(-1))
+         {
+           *out = s;
+           *(s + len - outlen - done) = '\0';
+--- src/main.c	Mon Mar 09 02:39:10 2015
++++ src/main.c	Sun Mar 15 06:37:41 2015
+@@ -121,9 +121,31 @@
+ }
+ #endif /* defined(SIGHUP) || defined(SIGUSR1) */
+ 
++#ifdef WINDOWS
++#ifdef LOCALEDIR
++#undef LOCALEDIR
++#endif
++#include <shlobj.h>
++char *LOCALEDIR;
++char locPath[MAX_PATH];
++char rcPath[MAX_PATH];
++char szDrive[_MAX_DRIVE];
++char szDir[_MAX_DIR];
++char szFName[_MAX_FNAME];
++char szExt[_MAX_EXT];
++#endif
++
+ static void
+ i18n_initialize (void)
+ {
++#ifdef WINDOWS
++	if (GetModuleFileNameA (NULL, locPath, MAX_PATH))
++	{
++		_splitpath (locPath, szDrive, szDir, szFName, szExt);
++		_makepath (locPath, szDrive, szDir, "locale", NULL);
++		LOCALEDIR = strdup (locPath);
++	}
++#endif
+   /* ENABLE_NLS implies existence of functions invoked here.  */
+ #ifdef ENABLE_NLS
+   /* Set the current locale.  */
+@@ -956,8 +978,18 @@
+       xfree (user_wgetrc);
+     }
+ #ifdef SYSTEM_WGETRC
++#ifdef WINDOWS
++  if (GetModuleFileNameA (NULL, rcPath, MAX_PATH))
++  {
++    _splitpath (rcPath, szDrive, szDir, szFName, szExt);
++    _makepath (rcPath, szDrive, szDir, "wget", "ini");
++  }
++  if (printf (_("    %s (relative)\n"), strdup (rcPath)) < 0)
++#else
+   if (printf (_("    %s (system)\n"), SYSTEM_WGETRC) < 0)
++#endif
+     exit (WGET_EXIT_IO_FAIL);
++
+ #endif
+ 
+ #ifdef ENABLE_NLS
+--- src/mswindows.c	Thu Dec 04 15:55:49 2014
++++ src/mswindows.c	Sun Mar 15 22:19:23 2015
+@@ -534,6 +534,8 @@
+   bool rc;
+ 
+   DEBUGP (("seconds %.2f, ", seconds));
++  if ( opt.connect_timeout > 21.0 )
++    DEBUGP (("\nWindows internal timeout maybe shorter than %.2f seconds", seconds));
+ 
+   if (seconds == 0)
+     {
+--- src/openssl.c	Wed Feb 11 04:23:49 2015
++++ src/openssl.c	Sun Mar 15 04:36:13 2015
+@@ -168,6 +168,15 @@
+ 
+    Returns true on success, false otherwise.  */
+ 
++#ifdef WINDOWS
++#include <shlobj.h>
++char caPath[MAX_PATH];
++char szDrive[_MAX_DRIVE];
++char szDir[_MAX_DIR];
++char szFName[_MAX_FNAME];
++char szExt[_MAX_EXT];
++#endif
++
+ bool
+ ssl_init (void)
+ {
+@@ -267,7 +276,17 @@
+    */
+   if (opt.secure_protocol == secure_protocol_pfs)
+     SSL_CTX_set_cipher_list (ssl_ctx, "HIGH:MEDIUM:!RC4:!SRP:!PSK:!RSA:!aNULL@STRENGTH");
+-
++#ifdef WINDOWS
++  if (GetModuleFileNameA (NULL, caPath, MAX_PATH))
++  {
++    _splitpath (caPath, szDrive, szDir, szFName, szExt);
++    _makepath (caPath, szDrive, szDir, "curl-ca-bundle", "crt");
++    if (!opt.ca_cert)
++      if (!opt.ca_directory) {
++        opt.ca_cert = strdup (caPath);
++    }
++  }
++#endif
+   SSL_CTX_set_default_verify_paths (ssl_ctx);
+   SSL_CTX_load_verify_locations (ssl_ctx, opt.ca_cert, opt.ca_directory);
+ 
+--- src/recur.c	Tue Dec 02 14:49:37 2014
++++ src/recur.c	Sun Mar 15 04:36:13 2015
+@@ -643,7 +643,14 @@
+           goto out;
+         }
+     }
+-
++  if (u->file[0] == '\0')
++    {
++      if (!acceptable (url))
++	      {
++	        DEBUGP (("%s does not match acc/rej rules.\n", url));
++	        goto out;
++	      }
++    }
+   /* 7. */
+   if (schemes_are_similar_p (u->scheme, parent->scheme))
+     if (!opt.spanhost && 0 != strcasecmp (parent->host, u->host))
+--- src/wget.h	Wed Feb 11 04:23:49 2015
++++ src/wget.h	Sun Mar 15 04:36:13 2015
+@@ -72,7 +72,7 @@
+    variables.  -- explanation partly taken from GNU make.  */
+ #define N_(string) string
+ 
+-#if HAVE_WCWIDTH && HAVE_MBTOWC
++#if HAVE_MBTOWC
+ # define USE_NLS_PROGRESS_BAR 1
+ #else
+ /* Just to be a little paranoid about it. */

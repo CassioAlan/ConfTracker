@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="18a8788e-c332-4452-90a5-9940df8a128d"
+  name="BLL"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="6ce8906f-89e7-42e4-aad7-016f7012d092"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DConfSpider.BLL"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="63c0e389-6cff-4130-bf5f-fbbbebd5baf2"
+        LastKnownName="ConferencesPagesDownload"
+        LastKnownLocation="Package1_2213.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="53881c6a-79d7-4fb1-a984-f9f34727feef"
+        LastKnownName="DateExtraction"
+        LastKnownLocation="Package2_2213.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="75129c97-fe27-4756-a696-182afde86863"
+        LastKnownName="UrlSearch"
+        LastKnownLocation="Package_2214.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

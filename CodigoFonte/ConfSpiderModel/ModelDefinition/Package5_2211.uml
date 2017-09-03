@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="71465f41-2038-4358-a733-085033eb0a41"
+  name="WebPagesDownload"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="a535830d-562a-454c-8830-355f8035ba35"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DConfSpider.INL.WebPagesDownload"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="f76c402f-3029-414d-bc48-2bb43e51656f"
+        name="WGetDownloader"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="869fae9b-85e8-4047-ac52-56b214be1fae"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWGetDownloader"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e5509cb7-7075-4ba5-869b-f5f9d40aac5f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="435b1992-940a-4c1b-be09-619da56af898">
+                <propertyInstance
+                  Id="a8c50b96-4157-47ea-9028-3701b91a0626"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ce4cb5f6-06cc-4ff4-a477-110f6321d474">
+                <propertyInstance
+                  Id="50179aa5-598a-4d4a-9328-77c0534f4cc5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="da2a5e42-54bb-42ef-99a0-24bc90c5182f">
+                <propertyInstance
+                  Id="c1a40839-1616-459d-aeca-463cef3d74c6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0cffc7ee-a04d-4cbc-b71c-418483ac9019">
+                <propertyInstance
+                  Id="985c5005-7ff9-4aee-a30a-37f7a46d4221"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dcf1bb2a-188e-4e5f-bac5-e252f299c505">
+                <propertyInstance
+                  Id="7eefc310-e816-4343-af56-1133e9c48781"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="c5a45f82-c60a-486e-a0af-9e4a3df714fc"
+            name="m_wget_exe_path"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="2eccd9cd-8187-44fe-a3b2-48b8be01dd2b"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWGetDownloader Member%3Dm_wget_exe_path"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="51041249-5505-4497-a82d-4728f851d834"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="300de203-92bb-4d9b-bb9d-189c12a8780d">
+                    <propertyInstance
+                      Id="423fff59-00a4-441d-aacf-4653d09b60f2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6431c2db-19ff-4150-8d38-18802c0beae9">
+                    <propertyInstance
+                      Id="8b77bc90-f928-4adf-af9a-05285856a6bc"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75e3c3a2-8444-40de-92ad-a9a38cea25f5">
+                    <propertyInstance
+                      Id="6e777853-fc71-4253-8015-09c8e32c6450"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cf31276-ac9e-4e8b-aae5-90aaf2d81537">
+                    <propertyInstance
+                      Id="9475c319-2f0b-4a41-981c-3762650747f7"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44fc1105-0165-4deb-9b46-292cd35a55af">
+                    <propertyInstance
+                      Id="0a891be4-6174-448a-b4e0-910c115b7e64"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ConfSpiderModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fd0c86c1-ca99-4dce-bbab-23668b66f34b"
+            name="ReceivedMessage"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="67fb98e0-c6bd-4bb2-8722-979bb719fcca"
+                handle="viewcode://./CodeSchema_Event?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWGetDownloader Member%3DReceivedMessage"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="07296e5a-1c80-4870-8d54-5cd8024359ee"
+                name="event"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee078e64-948e-47d5-ac37-937e26dc3c3e">
+                    <propertyInstance
+                      Id="8b13b0d7-fd31-49c4-82ed-d73b1a496241"
+                      name="Add"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4741df56-5eaa-436a-9d7f-35be012c386d">
+                    <propertyInstance
+                      Id="784d60c6-98e8-49a4-ad42-94202ca81519"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="738112aa-e87e-4b57-acfa-f4ef2e771116">
+                    <propertyInstance
+                      Id="f8816fe5-681d-4ad3-ace4-7ce50a6344c4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7ff1fdf-a6f9-452f-862d-07935477391c">
+                    <propertyInstance
+                      Id="7c283cd6-184c-4cec-bb0c-b3323333f28e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0be32dc3-93ef-4175-919f-3043758a05f1">
+                    <propertyInstance
+                      Id="14414b91-dcf1-4a6c-8f21-c7f05402bdc6"
+                      name="Remove"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="808b70d8-9350-44ba-9a5a-f45fd8ba003b"
+                LastKnownName="EventHandler&lt;WebPagesDownloaderEventArgs‎&gt;"
+                LastKnownLocation="Package2_1953.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0429f963-9127-42b3-b062-f518deabc26d"
+            name="OnReceivedMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0ce861ac-ecdd-419e-8ef3-b996b15e0908"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWGetDownloader Member%3D(Name%3DOnReceivedMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6e1d579e-d4b2-4421-85a4-83c633a9b9cb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32171939-8d7b-4205-8a01-0f9405cc94f8">
+                    <propertyInstance
+                      Id="ff9aaf8e-a85a-45e8-98ce-dcc852f981a9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51b27e8b-4fa6-486d-b074-730c65a32d7d">
+                    <propertyInstance
+                      Id="fbd90615-ec18-4d36-be04-0e0063bb2c44"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="214eb876-7fd8-4d4b-9454-071d87ad40df">
+                    <propertyInstance
+                      Id="1db22b12-2041-47b0-9779-05b39874749f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e542d9ba-e66f-4cfc-8bcb-ae1cd01ec30a">
+                    <propertyInstance
+                      Id="79e26a24-dd39-4012-8a50-49ee517756fe"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02894544-5dc5-4bc8-a1d8-f7d13f4afd6f">
+                    <propertyInstance
+                      Id="ea4386ee-1387-41e2-9daf-ed6ef3dc6bee"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a52abc3-62a9-4b3a-b207-92b379a06cd9">
+                    <propertyInstance
+                      Id="30f73899-55ea-4809-bc0f-02788f5a1f9d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2fcdeb15-f2ff-4fde-b2e5-873fea4db5c2"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="64958e98-e9ae-4290-b46d-60bb920e960e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWGetDownloader Member%3D(Name%3DOnReceivedMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dmessage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ConfSpiderModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8df705a3-b8e9-4de6-b2b2-5b303f2b0773"
+            name="DownloadAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="60673683-3684-4b9a-8be7-a49bf80f77fc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWGetDownloader Member%3D(Name%3DDownloadAll OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.TOLibrary%2Fbin%2FDebug%2FConfSpider.TOLibrary.dll Namespace%3DConfSpider.TOLibrary Type%3DUrlTO)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a2a90523-0846-4620-b9de-91be842a5ee0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b871ead-8307-44b9-8591-21e5c1b85632">
+                    <propertyInstance
+                      Id="fe32a7a7-90ae-4aae-912c-2bc2882e9626"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b94f8a2d-1f5a-4435-8334-b40b041abbde">
+                    <propertyInstance
+                      Id="bd6f8191-29be-49d1-a016-bdf27eb14c11"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a9bc5cb-71e1-4d5b-93d8-aa72abd05dd9">
+                    <propertyInstance
+                      Id="a1c5118e-94ba-4919-b7c8-e5b560ce19e6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="334a2f2e-99a7-4643-8087-08a4f725dcf3">
+                    <propertyInstance
+                      Id="0953a696-b4b7-4cc0-bace-6c36d2740bb3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="310b37ec-e236-451c-a531-5a87d9e5b784">
+                    <propertyInstance
+                      Id="eab62ff8-b4a3-4ad4-b3fd-cd51c99c8f5f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba96e207-e99c-46f4-83a5-97a416ecf95f">
+                    <propertyInstance
+                      Id="48eaa231-c3d9-4f4e-9e8d-a3508ee3155f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5a3210b6-f565-4fbe-b0b8-e5f14dd3a0f5"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e94700bb-b61a-47bb-b9ee-49be2a012919"
+                      LastKnownName="MessageResponse&lt;Object‎&gt;"
+                      LastKnownLocation="Package3_1955.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d3a601a3-37b7-4c19-8b67-5e92ca16905b"
+                  name="urls"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d37e2966-72e5-46b6-9387-f009a383a181"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWGetDownloader Member%3D(Name%3DDownloadAll OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.TOLibrary%2Fbin%2FDebug%2FConfSpider.TOLibrary.dll Namespace%3DConfSpider.TOLibrary Type%3DUrlTO)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Durls"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="cf52e4ef-7687-4e19-8ce4-6e299efb57d2"
+                      LastKnownName="List&lt;UrlTO‎&gt;"
+                      LastKnownLocation="Package4_1953.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7ff313c6-c2ae-4381-afe2-68a21acf08f2"
+                  name="savingPath"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8c85e3d9-9aa4-4292-a0bf-bd9a7667d2db"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWGetDownloader Member%3D(Name%3DDownloadAll OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.TOLibrary%2Fbin%2FDebug%2FConfSpider.TOLibrary.dll Namespace%3DConfSpider.TOLibrary Type%3DUrlTO)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DsavingPath"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ConfSpiderModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9f965b6e-798c-4094-b80b-b8ef94be1adf"
+            name="WGetDownloader"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d5279304-5a90-4055-86d0-146361e52cc2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWGetDownloader Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3ef62f12-8610-433e-b7dc-194ddd03950b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64fa1706-ce4e-4196-a238-d631e69c20fa">
+                    <propertyInstance
+                      Id="09b0b7a5-4bc2-466f-b522-e88695124976"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1833eb4c-0250-442c-bf26-8bba316eb616">
+                    <propertyInstance
+                      Id="fa46b511-5f46-44ef-b659-abbc884cb56f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2460c983-6673-4ffa-ba37-78222b91d4e6">
+                    <propertyInstance
+                      Id="74c8a1e5-0259-401d-bdd6-7273f0c4a9e0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b5e6298-0cfe-42a2-80ae-f40e082049ff">
+                    <propertyInstance
+                      Id="c83c2574-bbb0-4dd1-8093-78c65a1b92fd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6651bc27-8b84-463c-b2af-688ec5de86f9">
+                    <propertyInstance
+                      Id="854c25e3-0faa-4e4f-93eb-9d5e26dcaf41"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb9d8043-c541-4877-986d-af78c7213670">
+                    <propertyInstance
+                      Id="274c46a5-9eeb-4c6b-a934-94a9fe80f4b4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="80e83eee-0ee7-445e-8d11-ba3e7f4f1660"
+        name="WebPagesDownloaderEventArgs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="48f70334-7337-4a8b-a0ea-27e5c56d0d96"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWebPagesDownloaderEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="aefe1ddf-383f-4ca8-aae3-8f8d0f68052f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="147466f8-4738-4b20-905c-7b5d3aa6403c">
+                <propertyInstance
+                  Id="ec0779ba-e4e8-41f5-99de-1ab503e727e0"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="42f13db3-0971-48aa-86d4-acddaecca34f">
+                <propertyInstance
+                  Id="a3f6a9ed-ad25-4d15-9ac9-9f1aea464751"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e5066ea6-2e0d-40b7-bb17-0c9c3bab43f7">
+                <propertyInstance
+                  Id="6804e7a3-31c1-4703-8d79-e525de7ecbd1"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="819266ce-a5a3-4599-9b7d-518654574c34">
+                <propertyInstance
+                  Id="93060b6d-9b0e-4769-be4e-a3beca254820"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7b73c257-3bad-45bd-999a-6ccf3459e87c">
+                <propertyInstance
+                  Id="257a85a5-d14a-4903-aa92-98b5bc71ec5c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="83481552-5007-48f0-a11f-b1ecb0a1095d"
+            isSubstitutable="false">
+            <classMoniker
+              Id="d057c3e5-8028-498c-858e-b207edbba888"
+              LastKnownName="EventArgs"
+              LastKnownLocation="Package2_1953.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="db080fda-c663-4a44-8e4a-22eccec59d49"
+            name="Message"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="61041ae2-8612-4820-9921-315a7160d0ee"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWebPagesDownloaderEventArgs Member%3DMessage"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2871136b-a016-42e2-9560-6d39872d0082"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e753f2a-4a37-483d-931a-6f624ebbd500">
+                    <propertyInstance
+                      Id="97afa5fb-a6ac-4e5b-9838-497fec85b4ed"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a144abaf-dc3f-4ab2-b01d-b0387875fe35">
+                    <propertyInstance
+                      Id="4e11c124-1420-4a2f-9c84-074fa6bfbba2"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="303da436-e226-4020-a869-31a12e420da2">
+                    <propertyInstance
+                      Id="58c6aa6e-6314-4eac-9a44-ad29cac87461"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b8645581-85e2-47b2-b90a-09adc7171635">
+                    <propertyInstance
+                      Id="77c9dc44-b7e0-4850-955e-efa863e37e15"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9141d5a-0e05-4cb2-98ac-03084342288e">
+                    <propertyInstance
+                      Id="201a4b5d-d193-498a-9dd8-51ebce0b269c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9eef6fa6-0533-498b-b6e3-31b1e95be7ed">
+                    <propertyInstance
+                      Id="d05ba3f0-6bee-46d5-aa0c-738633abf867"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f106a8eb-755a-4aad-9037-39bfd62c9195">
+                    <propertyInstance
+                      Id="1a500b06-f109-4366-9c60-e89ae0755169"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ConfSpiderModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="47a878e5-ae59-40c6-8a26-25eecff11bfa"
+            name="m_message"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4ddba10c-5507-4702-bf23-2b8b36cefcfd"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWebPagesDownloaderEventArgs Member%3Dm_message"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cf8498b3-66ab-44b6-bce2-f002a99d2527"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5188961b-b57f-4dda-904b-944229fd1bb6">
+                    <propertyInstance
+                      Id="344c3b15-31da-4811-a08b-7d43a480ec46"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a502eb6c-fab8-4787-a9d5-f663aad5f75a">
+                    <propertyInstance
+                      Id="359e6362-1a9a-4673-b028-8aac454fcd2f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32077d78-84b4-44b2-8bb5-747055fe35d9">
+                    <propertyInstance
+                      Id="f7249f3d-8f2d-427c-992b-437fdf10a525"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4144b14-0ed6-47cd-b759-d64e6fc1c59a">
+                    <propertyInstance
+                      Id="e180297e-d82a-45f4-aa01-744fd78fbee9"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1961599f-6fd2-41df-8efe-cd9f7f1d5c79">
+                    <propertyInstance
+                      Id="f2958bc5-3998-4167-8fc7-e9f94cd25bcd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ConfSpiderModel.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5242d986-aeb6-4701-944c-2a1068db99a7"
+            name="WebPagesDownloaderEventArgs"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="14c9b083-c242-448d-9ac7-9dbc3229b2dc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWebPagesDownloaderEventArgs Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ba202aa1-107d-449c-ae5e-18304157a9aa"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eab431b0-1c49-4de6-b1e8-07039f89dbc2">
+                    <propertyInstance
+                      Id="582f8b76-365e-419b-ab42-eaf1d2b09991"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4bbce313-3d15-47ee-9cc6-6c416208efb6">
+                    <propertyInstance
+                      Id="d8a53f8e-193f-47b6-8102-9ebbf4b15b6e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8514433-a1c3-4d70-8e72-4b1af47e8601">
+                    <propertyInstance
+                      Id="6c88b706-c06c-45db-adca-060b37196cd8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9629e809-7903-4ece-a625-75b076e68665">
+                    <propertyInstance
+                      Id="8707852a-71ac-4358-9132-3e494970384a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7fe97cfc-024e-4c41-9441-71a1fb001565">
+                    <propertyInstance
+                      Id="77e99732-6fbd-49b0-ad47-2dfecfba5128"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6ec3aec-f8e2-4bab-a2e9-019b1fceb276">
+                    <propertyInstance
+                      Id="382e63ef-38ab-4803-a4e1-413a016b3684"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f0e4740a-dfa9-4d69-91ba-b7a81f92404c"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="01c90b82-acd1-482d-8a23-d6b0ccf27e44"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.WebPagesDownload%2Fbin%2FDebug%2FConfSpider.INL.WebPagesDownload.dll Namespace%3DConfSpider.INL.WebPagesDownload Type%3DWebPagesDownloaderEventArgs Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dmessage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ConfSpiderModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

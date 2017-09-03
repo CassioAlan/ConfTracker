@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4dc4600e6ad54751b8ba9a1f2b9dc5cb" Name="Diagram1">
+        <EntityTypeShape EntityType="ConfSpiderModel.conferencia" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConfSpiderModel.datum" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConfSpiderModel.edicao" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConfSpiderModel.edicaotopico" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConfSpiderModel.tipodata" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConfSpiderModel.url" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <AssociationConnector Association="ConfSpiderModel.fk_edicao_conferencia_idconferencia" ManuallyRouted="false" />
+        <AssociationConnector Association="ConfSpiderModel.fk_data_edicao" ManuallyRouted="false" />
+        <AssociationConnector Association="ConfSpiderModel.fk_data_tipodata" ManuallyRouted="false" />
+        <AssociationConnector Association="ConfSpiderModel.fk_edicaotopico_edicao" ManuallyRouted="false" />
+        <AssociationConnector Association="ConfSpiderModel.fk_url_edicao" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ConfSpiderModel.topico" Width="1.5" PointX="7.375" PointY="0.875" />
+        <AssociationConnector Association="ConfSpiderModel.fk_edicaotopico_topico" />
+        <AssociationConnector Association="ConfSpiderModel.fk_topico_topico" />
+        <AssociationConnector Association="ConfSpiderModel.fk_tipodata_tipodata" />
+        <EntityTypeShape EntityType="ConfSpiderModel.tipoextracao" Width="1.5" PointX="7.625" PointY="4.25" />
+        <AssociationConnector Association="ConfSpiderModel.fk_data_tipoextracao" />
+        <AssociationConnector Association="ConfSpiderModel.fk_url_tipoextracao" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-02-07T22:14:56" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '2bb04bd4-e697-48d6-a991-d607651a9aa4' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '9128fbc3-ec93-4da9-a557-c4a383aea9b7' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider' -  (Package)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL' -  (Package)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch' -  (Package)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearcher' -  (Class)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearcher::_bingSearch_ReceivedMessage' -  (Operation)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearcher::_bingSearch_ReceivedMessage::e' -  (Parameter)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearcher::_bingSearch_ReceivedMessage::sender' -  (Parameter)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearcher::GenerateQueries' -  (Operation)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearcher::m_retrieve_url_count' -  (Property)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearcher::OnReceivedMessage' -  (Operation)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearcher::OnReceivedMessage::message' -  (Parameter)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearcher::ReceivedMessage' -  (Property)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearcher::SearchURLs' -  (Operation)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearcher::UrlSearcher' -  (Operation)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearchEventArgs' -  (Class)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearchEventArgs::m_message' -  (Property)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearchEventArgs::Message' -  (Property)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearchEventArgs::UrlSearchEventArgs' -  (Operation)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearchEventArgs::UrlSearchEventArgs::message' -  (Parameter)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::INL' -  (Package)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::INL::UrlSearchEngine' -  (Package)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::ConfSpider::INL::UrlSearchEngine::UrlSearchEngineEventArgs' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::Masters' -  (Package)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::Masters::Core' -  (Package)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::Masters::Core::Comunication' -  (Package)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::Masters::Core::Comunication::MessageResponse' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::Masters::Core::Comunication::MessageResponse&lt;Object‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::System' -  (Package)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::System::EventArgs' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::System::EventHandler' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::System::EventHandler&lt;UrlSearchEventArgs‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ConfSpiderModel::System::Object' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ConfSpiderModel::ConfSpider::BLL::UrlSearch::UrlSearchEventArgs to ConfSpiderModel::System::EventArgs (Generalization)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ConfSpiderModel::ConfSpider::INL::UrlSearchEngine::UrlSearchEngineEventArgs to ConfSpiderModel::System::EventArgs (Generalization)" />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="High" Text="(2) type(s) fully reverse engineered." />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="High" Text="(7) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2016-02-07T22:14:58" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

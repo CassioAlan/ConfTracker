@@ -1,0 +1,930 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="75129c97-fe27-4756-a696-182afde86863"
+  name="UrlSearch"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="3740d70a-b989-41fe-ae77-e428d7ffeb9c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DConfSpider.BLL.UrlSearch"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="479592e8-0b46-4831-9ce4-adaa82e0edb1"
+        name="UrlSearchEventArgs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="406ee962-e317-4774-80d3-96bbd652aca6"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearchEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2dc182cd-9881-4af3-a2d1-cb628401404e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="554975e5-adfd-47da-935e-0b58a0a746fc">
+                <propertyInstance
+                  Id="4b0b5662-06f2-43d8-8dc4-ead91e56bace"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6f63517e-7fb9-46de-adb1-1af998772a90">
+                <propertyInstance
+                  Id="d385acd9-98d4-4dcd-89f5-f9b1389d227e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4cd57b78-dec2-412c-8671-17aa499ab11a">
+                <propertyInstance
+                  Id="06e044dc-f993-49db-97e3-06a4ec77c15f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="17220490-2f2c-4045-9f97-6bc6c83c3445">
+                <propertyInstance
+                  Id="d1cb533d-b498-48d0-9497-8f75af3f3720"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ad7f4f38-c6b3-4991-b1af-94b5a8d4d6d5">
+                <propertyInstance
+                  Id="89654d13-9eaa-45d2-8fab-0297b552430e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="7d1bd7a8-7301-4104-84a7-07895b29c109"
+            isSubstitutable="false">
+            <classMoniker
+              Id="d057c3e5-8028-498c-858e-b207edbba888"
+              LastKnownName="EventArgs"
+              LastKnownLocation="Package2_1953.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="8ca4e38f-1e9a-4cc4-8760-c54e32727027"
+            name="Message"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="901b12e4-9c3a-4c42-b46f-ad05834e93d6"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearchEventArgs Member%3DMessage"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8824b4cf-7a56-4bf1-9963-d31ee6dea3d0"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56cf9780-4b69-4429-a9a5-f3511ec6c8ef">
+                    <propertyInstance
+                      Id="19715e3d-33f6-42fc-9430-41be5921f1c2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e4645ba-79cc-416e-b109-b65a7c8d9690">
+                    <propertyInstance
+                      Id="470f0353-71c2-4b07-8713-e4b03e1966d5"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9fef5282-23db-4533-a07c-79c4739737e3">
+                    <propertyInstance
+                      Id="2c511c4c-650e-4593-94ec-4ada628f06a8"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41bfd61f-bb6f-413b-a227-2f32fcaa4942">
+                    <propertyInstance
+                      Id="e76bdcb0-0690-4f69-a251-56e2ccd98177"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b95f62e-787f-4d0a-a823-b4877046a1b9">
+                    <propertyInstance
+                      Id="f0cc1316-1c7c-4552-b623-559970e800b6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54052a1d-50ef-4883-a372-fa505e21075b">
+                    <propertyInstance
+                      Id="5d4ebd9c-6e15-4780-a0bc-17bcccd36e91"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c75af01-dd90-46ba-9e59-2b89103ce9da">
+                    <propertyInstance
+                      Id="dcc14532-5b3c-4f76-aeb9-e0bc5b75dfd4"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ConfSpiderModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f7c8e87f-0153-4c67-85eb-20da9bd2067d"
+            name="m_message"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1263e928-850a-4a7f-9662-1a6578851611"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearchEventArgs Member%3Dm_message"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1190dd53-d540-48c4-8dfd-5b76728b262f"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5162c34-5116-4252-9429-59c2d8ac5771">
+                    <propertyInstance
+                      Id="ba3083f6-cead-4090-98ef-2a2ba4cf2555"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc2f30b4-ed43-44b0-9671-1ec55b441fc4">
+                    <propertyInstance
+                      Id="35541f7e-06ce-4c56-bff3-431d6a6f260d"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d857a65-b869-4b4a-aa70-ce8ae131de07">
+                    <propertyInstance
+                      Id="b481ec89-4590-4cd5-b7c2-76815cdf015c"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f176752-5d0b-4d82-accc-fe433451bc86">
+                    <propertyInstance
+                      Id="14f3bbce-76d0-4136-a3bb-f88b0e269a93"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8028369-878b-4d7e-9866-5f4ebb9ee13f">
+                    <propertyInstance
+                      Id="75d60771-c515-4518-ac07-22e8201e2f65"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="ConfSpiderModel.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="eba0810c-7aa5-4e21-9881-21720191a0f2"
+            name="UrlSearchEventArgs"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2f6b36f0-7713-4e73-80b0-ef00cb134c95"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearchEventArgs Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8954a780-d819-4d4e-b631-c83926726849"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b113229a-681c-4fc0-a88f-0c6be5de701b">
+                    <propertyInstance
+                      Id="7cfb2bf8-4130-49c2-b044-3156e09a856a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df159c47-4c0f-43d6-bdea-2b099e6d4278">
+                    <propertyInstance
+                      Id="1576088c-e34b-4ed4-9686-13fa4974460d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d75a6190-73ae-44c6-9bf7-06b90071e1ba">
+                    <propertyInstance
+                      Id="3ffc6e5a-bb61-4fdf-8a1a-d5cd9e676a98"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99c79d44-605d-438c-8dd7-5a8a47b17761">
+                    <propertyInstance
+                      Id="24f9e098-d8e2-4485-9f38-d1accf6b8dde"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0bd11085-c6ca-40f2-97f1-7719a52fb759">
+                    <propertyInstance
+                      Id="66c17c46-0551-4f9b-9f66-a1f357a1b392"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0f17121-ff22-4799-a2e7-951d5eaf70d3">
+                    <propertyInstance
+                      Id="cc8fc555-942b-4b42-b7a3-7bc5ed3c6e32"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a2419ff8-2063-49db-a255-a6172832c6fd"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="427bfada-dd1c-4392-b213-5d47c7051ce4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearchEventArgs Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dmessage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ConfSpiderModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="889c6f3a-00b2-4fb7-bd17-283b210e187e"
+        name="UrlSearcher"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="173b7831-1831-4dad-84d5-acbf9aabd086"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearcher"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="146c527b-3b80-4bd4-a18a-d9fc5ddc23f8"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="105fc7af-07fc-4ae0-9202-5a0eea293507">
+                <propertyInstance
+                  Id="ce39f0ec-692b-42ae-a4c4-5506f4631f84"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c4ebb840-78ca-458e-8688-d0243782bb00">
+                <propertyInstance
+                  Id="8d5bc695-9a37-4c22-917c-3290d436e092"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9e0d6db2-dfbf-4445-ab5b-16a12ed99e96">
+                <propertyInstance
+                  Id="6e9e6c6a-b8c5-4509-9664-521e1f2ce4e8"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="15cd7ec3-eb2c-4c65-8539-157da2b17408">
+                <propertyInstance
+                  Id="253d6076-eac9-4957-9f23-e4d44b2c4dfd"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4463860b-0ea1-49f7-a5b3-5ca966f805ae">
+                <propertyInstance
+                  Id="2e384fca-e2cb-4097-aa0a-5cc7ce2880c1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="3010d780-1e1f-4d27-b698-e2fa0979f517"
+            name="m_retrieve_url_count"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="61ce32a6-91a8-47d8-9ed6-a55c6b87ba21"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearcher Member%3Dm_retrieve_url_count"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2dbe3539-629c-4dc6-a4b7-9491dccdc5a5"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7bdafdf0-b5e4-4008-8e9e-bac921a04410">
+                    <propertyInstance
+                      Id="8ac749e6-6e26-4e3d-a35c-aed639db519f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4708a33c-a6cd-4be5-8c07-eddd39df559e">
+                    <propertyInstance
+                      Id="721d2bf9-ec0a-4021-b043-1998faf8434d"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02804837-c867-476b-8f4b-a30aa3884197">
+                    <propertyInstance
+                      Id="d45c9893-c349-4afd-9968-db238438a559"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7326d05-da1c-41e1-b23e-9df0111f0c7e">
+                    <propertyInstance
+                      Id="418fcc26-fb9c-4f9c-ab7c-1facf1a6d0b5"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9668629a-21b5-467e-b3a5-b7d8ac3c3a0e">
+                    <propertyInstance
+                      Id="66a3961b-9b21-4de0-8861-7fe89918961c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ConfSpiderModel.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9367e1a1-19f1-452f-96bb-9816e0e2ac30"
+            name="ReceivedMessage"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="fb42bc1a-5936-4308-ae63-689b479b6412"
+                handle="viewcode://./CodeSchema_Event?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearcher Member%3DReceivedMessage"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3c6f4a1d-cc88-4a58-adfa-d4fbe4ed0cf9"
+                name="event"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78b75f28-8360-4de0-a187-3599ccece9bf">
+                    <propertyInstance
+                      Id="a2dd3569-b4e6-4423-8dc8-69a9e4263100"
+                      name="Add"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4617e62-71f3-42ec-93d1-21526dae47d8">
+                    <propertyInstance
+                      Id="97a2a593-5e6c-4b3f-bdc3-bb75a016a38c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="26bbe386-9de3-4995-b9d6-554ac5eb566a">
+                    <propertyInstance
+                      Id="7602a775-ed70-4779-a4a6-bdeb47be99f6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c3b74c66-e4c3-492b-a7ec-d23336975f6e">
+                    <propertyInstance
+                      Id="dc905cb2-b68d-4321-99af-706d53a736b3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2395084a-1899-4460-851e-ef6e4d0a235e">
+                    <propertyInstance
+                      Id="6fd203eb-08b3-4dca-87e8-f0f671a6b8f3"
+                      name="Remove"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="bfa1613b-0a38-429e-8df4-bf4ef8ff7337"
+                LastKnownName="EventHandler&lt;UrlSearchEventArgs‎&gt;"
+                LastKnownLocation="Package2_1953.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="26b0b36f-e2f3-4245-ac76-9955f72dd89d"
+            name="SearchURLs"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c5f422fb-c097-4b09-8eb6-815091a842a0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearcher Member%3DSearchURLs"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b8651f70-60f3-4cb5-b9b0-58fe6cc3a83d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0f8bbaf-b6c6-4061-830e-75f2decd9d1e">
+                    <propertyInstance
+                      Id="6db80d4b-956e-4dac-ab54-aaf8d0c5d7b4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20dd1427-0409-4b71-bbea-b773683cfed1">
+                    <propertyInstance
+                      Id="71e3404f-3862-433f-9097-03d9ce1d0c79"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="402c7340-7278-4b7c-8054-e6d2b0bef514">
+                    <propertyInstance
+                      Id="f967fd33-16cd-4c3a-a8f4-7b96ca5a1de4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c895aca1-97f1-481e-a091-101f6f5de1f9">
+                    <propertyInstance
+                      Id="0f38f9b7-f3c8-4f10-bc37-544b90fc378c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="400e07b6-ae2a-4a3b-9c55-efd01743a46f">
+                    <propertyInstance
+                      Id="29a4b8d1-adbc-4b2d-9c2e-95ebf78badba"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4c2a927-2a8d-4b31-8959-bfd3c520185a">
+                    <propertyInstance
+                      Id="9729c77a-fa3b-4b23-b2ea-e7a9764a1ec2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="04212772-2e83-4977-9850-8248aaed8820"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e94700bb-b61a-47bb-b9ee-49be2a012919"
+                      LastKnownName="MessageResponse&lt;Object‎&gt;"
+                      LastKnownLocation="Package3_1955.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d1050043-8970-477a-b582-798a4eb0c288"
+            name="GenerateQueries"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a75dbc85-ad7e-4ef6-818e-dfff79430a88"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearcher Member%3DGenerateQueries"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="595045aa-bc35-4b9d-b16a-b33e2c55f8ed"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81494682-f5f5-46d3-942f-0bcc4ddaccb7">
+                    <propertyInstance
+                      Id="5587823e-5771-402c-b1ad-e9c2a9a81d9a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8387af49-cab1-4d36-90e3-a6154930a6a0">
+                    <propertyInstance
+                      Id="a5d7db76-337f-44b0-a034-dd0e0fea4932"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59addfa4-d967-49fc-86c2-388459ca6833">
+                    <propertyInstance
+                      Id="6ade1acd-ac5b-45b0-b7ac-8c445eb541e4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a34357cf-88e4-4f32-ab0a-1e8bff07d799">
+                    <propertyInstance
+                      Id="582a4ff7-1614-4ba4-9689-d05cda3b4bd4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e344fc3a-f680-4528-bb7c-03b4f70aaa2d">
+                    <propertyInstance
+                      Id="272c82a0-b5e0-49d0-84c2-a3af9f7c0a83"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94ee1204-d3f2-40d3-abff-ac546559ccff">
+                    <propertyInstance
+                      Id="b2d79ca8-35a0-4bb8-9826-d24ecc3c0be5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5fe7248a-885f-42b0-85bf-6a2e50fca6a3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e94700bb-b61a-47bb-b9ee-49be2a012919"
+                      LastKnownName="MessageResponse&lt;Object‎&gt;"
+                      LastKnownLocation="Package3_1955.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1fbc92de-2fb9-4f88-8beb-c9aac1df08f8"
+            name="OnReceivedMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="516aff07-c814-4616-891c-b934afb7e7ba"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearcher Member%3D(Name%3DOnReceivedMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="27b64e54-78df-4295-9263-ff92ff051771"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab2c51c5-0a10-4bb8-b0c1-a3b51db1d3e4">
+                    <propertyInstance
+                      Id="8ce3f8f5-748d-495c-8f4a-bb62ecb6b7bf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94edc148-2dc1-411e-ad1b-dd68caaadf3e">
+                    <propertyInstance
+                      Id="639df793-c86e-4a35-8594-6445ad139bee"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2cc144a-2031-4ff7-b1c7-4e003d722935">
+                    <propertyInstance
+                      Id="d78ee7e6-e511-4833-94fb-24889577856c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45ef4f09-2762-4b08-8b35-392a0dc4614c">
+                    <propertyInstance
+                      Id="fa605d9e-e1f9-478c-81cc-2f5daaf83acf"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7cd32d21-b8cd-4d46-94c4-85eeb296a8d8">
+                    <propertyInstance
+                      Id="f16dbb52-2024-4f89-ac37-cb7f867e66e2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2bbac0c2-f333-436b-8658-655799c42a17">
+                    <propertyInstance
+                      Id="8d8a0504-49e4-44fd-8dbd-af039bb2681b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dc863e90-4891-4cbb-8703-0ac1bdceee1d"
+                  name="message"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="68cfdaa4-1441-4435-b1b0-1640e39720fd"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearcher Member%3D(Name%3DOnReceivedMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dmessage"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ConfSpiderModel.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="10aa46ab-e1b1-4f53-b59a-ae4882cce9f8"
+            name="_bingSearch_ReceivedMessage"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3eb6a0e7-1d5f-4c45-90dd-1c0a13102e93"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearcher Member%3D(Name%3D_bingSearch_ReceivedMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.UrlSearchEngine%2Fbin%2FDebug%2FConfSpider.INL.UrlSearchEngine.dll Namespace%3DConfSpider.INL.UrlSearchEngine Type%3DUrlSearchEngineEventArgs)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f0a26815-b470-4d86-9e07-497a57b92cd9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="faebcd2c-8ba0-4d52-9321-0474d1ea32a2">
+                    <propertyInstance
+                      Id="cd23cc88-4530-4867-b22e-02316797ab83"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e4414b1-dcc5-499b-a964-a17caf555596">
+                    <propertyInstance
+                      Id="5f140680-bbdf-40a9-b846-81f7f43991c9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55f53b81-5a4a-43d1-bae8-fefa84196b9a">
+                    <propertyInstance
+                      Id="52702f50-b885-4dd1-b7a3-2dfa128f3002"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="96f662ef-c96f-437c-902f-568a07404612">
+                    <propertyInstance
+                      Id="998c7fe5-dcbd-4fa8-b920-fd4df52f3a43"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0cdf123d-7c42-44aa-89d1-305ea6ad5c2d">
+                    <propertyInstance
+                      Id="42093011-8896-49b1-b878-340ffef60962"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e393fcb5-a2dc-4f47-ac5a-a07a10b3ba75">
+                    <propertyInstance
+                      Id="ffaaa83a-6443-4c41-910e-1836398d1344"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4b492175-c85e-4207-9295-681c8ce59841"
+                  name="sender"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="35f8aea7-570a-4c3b-861e-8fad4a6eea1a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearcher Member%3D(Name%3D_bingSearch_ReceivedMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.UrlSearchEngine%2Fbin%2FDebug%2FConfSpider.INL.UrlSearchEngine.dll Namespace%3DConfSpider.INL.UrlSearchEngine Type%3DUrlSearchEngineEventArgs)]) ParameterIdentifier%3Dsender"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="782fa7be-b068-43d5-84dc-36e7f7b08694"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1953.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3c44d491-72a6-46aa-ac46-46d8bb997065"
+                  name="e"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="67973de6-b897-41bb-8c1b-fa1204d339cc"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearcher Member%3D(Name%3D_bingSearch_ReceivedMessage OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.2%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.INL.UrlSearchEngine%2Fbin%2FDebug%2FConfSpider.INL.UrlSearchEngine.dll Namespace%3DConfSpider.INL.UrlSearchEngine Type%3DUrlSearchEngineEventArgs)]) ParameterIdentifier%3De"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b7d48359-badd-4e09-91bd-a9b31b8be582"
+                      LastKnownName="UrlSearchEngineEventArgs"
+                      LastKnownLocation="Package_2211.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bfccd5a5-9143-4a62-bf7c-534269e6e546"
+            name="UrlSearcher"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e259c3ad-31ca-4cb1-9192-aa48f80ad563"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.UrlSearch%2Fbin%2FDebug%2FConfSpider.BLL.UrlSearch.dll Namespace%3DConfSpider.BLL.UrlSearch Type%3DUrlSearcher Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4e6f0516-3b6b-4538-a210-d4247222fec5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3e44ac1-0bdc-42c3-b28c-59007a35d155">
+                    <propertyInstance
+                      Id="c84dda8b-c0ef-4d26-a9f6-6a954f6ac82f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ff61082-2122-4d97-8376-fba4d542b83f">
+                    <propertyInstance
+                      Id="63c82c8d-9665-4678-ab18-9363eadf436a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e73cf87d-aa67-43d8-b0f1-08d724e4c6aa">
+                    <propertyInstance
+                      Id="39ddd7f6-7056-49c4-b1c2-05241cd131e6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a4a6ea4-5469-47ba-9400-67aa3eea2130">
+                    <propertyInstance
+                      Id="b15621b2-1da0-48c8-8078-fc1a747ffbbd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="772ec51f-367a-453e-b337-b9fd4605c977">
+                    <propertyInstance
+                      Id="dc6d94d1-d2d9-4fa9-9d9c-2231aa9e522b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ee3ed79-51f7-46b1-bed9-8636d7b820fe">
+                    <propertyInstance
+                      Id="6a04ce73-454a-422c-a70e-04472535129b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

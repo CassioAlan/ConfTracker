@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="53881c6a-79d7-4fb1-a984-f9f34727feef"
+  name="DateExtraction"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="67b32853-2283-4754-a556-6ca3e0082237"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DConfSpider.BLL.DateExtraction"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5dec27f7-cfc5-43f3-8413-ecd3e79d2de1"
+        name="DateExtractor"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e81341ce-e39d-480d-836a-ec367594bd83"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.DateExtraction%2Fbin%2FDebug%2FConfSpider.BLL.DateExtraction.dll Namespace%3DConfSpider.BLL.DateExtraction Type%3DDateExtractor"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b9096291-b2ba-4064-858c-03e380f1deea"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b71660a8-0c8f-4770-b838-733064a220fe">
+                <propertyInstance
+                  Id="9c44238f-b602-4fef-ada2-26c2f53ff3be"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5e2d2456-ce00-4837-971e-f62c478aeb3b">
+                <propertyInstance
+                  Id="c0df24c2-7bf9-4c2c-b57b-129e02f365f3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="713d5b1a-82da-4705-80bd-d396283b18e1">
+                <propertyInstance
+                  Id="8f33a64a-0ffd-4ede-a960-2f01d82ff3ca"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="445f8639-4468-4dd4-9e93-694b7079a0b9">
+                <propertyInstance
+                  Id="1f8aa225-7d77-4811-8090-a31602a1dd96"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bca74f23-37eb-4c54-84d8-ddebbf3f8291">
+                <propertyInstance
+                  Id="6c1aed95-2389-44d5-a4e0-e55e8c4217b3"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6837f3d5-a92b-48da-bb1d-43faf2c46a41"
+            name="TextExtraction"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="227280ca-4ddc-428a-949f-3969dd97bddf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.DateExtraction%2Fbin%2FDebug%2FConfSpider.BLL.DateExtraction.dll Namespace%3DConfSpider.BLL.DateExtraction Type%3DDateExtractor Member%3DTextExtraction"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d2d48ced-034c-4ecb-b8be-9e49ddc96149"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fabee77f-6aa8-4924-a1c7-a6296fb328ad">
+                    <propertyInstance
+                      Id="bd10a776-2686-49b1-bc87-13f371f544ef"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c412c01-cc40-43f2-8018-9a0ba1645d09">
+                    <propertyInstance
+                      Id="0db1d36a-2885-4bbb-a5b5-62d8aa34a545"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae28c787-7c92-4c69-a16c-1a3ba59f28cd">
+                    <propertyInstance
+                      Id="f51f0600-6a95-4279-b651-15f0920b612c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab9115cf-4843-4f73-967b-24fa53a1b056">
+                    <propertyInstance
+                      Id="dfd25bc0-0480-4d1d-b6ff-acdce48896ea"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed2bf2e8-d6d2-40c4-bcdc-0bbcf7b1a58a">
+                    <propertyInstance
+                      Id="b28884fd-39b8-4c5e-b97b-b871202db195"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9485e96-235d-4495-b4d9-69290d1e0d7a">
+                    <propertyInstance
+                      Id="9562adc0-81e9-413c-b329-a64f2ee592e8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6b69be58-ac6a-45a3-ba1d-4f56ac3d0f83"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f1d37f04-63ab-42bc-ac89-c331b8759b27"
+                      LastKnownName="MessageResponse&lt;Boolean‎&gt;"
+                      LastKnownLocation="Package3_1955.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="07290189-25d8-4c47-9fb8-5fe65a30b8aa"
+            name="DateExtractor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="63a6c8b6-4f8e-4b1a-9543-9efe51e23ef9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FU:%2Fdevelopment%2FConfSpider%2FConfSpider.BLL.DateExtraction%2Fbin%2FDebug%2FConfSpider.BLL.DateExtraction.dll Namespace%3DConfSpider.BLL.DateExtraction Type%3DDateExtractor Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="824cf908-dd36-4217-a4b3-b9ae86a47b62"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="825821df-38d6-4648-b488-68beff56524f">
+                    <propertyInstance
+                      Id="8bc89994-2bf4-4f9c-949c-343f144b43f4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bc57acf5-3abd-4c3a-a8c3-e9ad6452657c">
+                    <propertyInstance
+                      Id="7ff621b0-b8d1-48d9-a17f-99a24af61aed"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39647aa3-1053-4c7f-8052-a1bced64ad84">
+                    <propertyInstance
+                      Id="97719da8-0b76-4243-9a22-54c4a9ecb080"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d0aff8b5-5cf4-4f57-b30d-23e11a7b8583">
+                    <propertyInstance
+                      Id="70abadcd-31e8-4f52-b205-7d2669f59591"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3c64263-1b51-4c92-b2ef-6ee67da2ce3b">
+                    <propertyInstance
+                      Id="fd391533-a917-4e15-81f3-9b37cbe830af"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32835635-6c0f-461a-9cc9-70232da97711">
+                    <propertyInstance
+                      Id="0062bd04-7196-4d2d-bdd9-eaa6aee9b3a5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
