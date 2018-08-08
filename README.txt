@@ -1,6 +1,10 @@
 
 README
 
+Sistema desenvolvido na Dissertação de Mestrado
+"Extração de informações de conferências em páginas web"
+https://www.lume.ufrgs.br/handle/10183/170942
+
 Linguagem utilizada: C#
 Base de dados: MySQL
 
